@@ -1,0 +1,41 @@
+{
+	"compilerOptions": {
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleDetection": "force",
+		"allowJs": true,
+		"jsx": "react-jsx",
+
+		//bundler mode
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true,
+		"noEmit": true,
+
+		//best practices
+		"strict": true,
+		"skipLibCheck": true,
+		"noFallthroughCasesInSwitch": true,
+
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"strictNullChecks": true,
+
+		"types": ["vite/client", "bun", "./global.d.ts"],
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"],
+			"#/*": ["./server/*"]
+		},
+		"resolveJsonModule": true,
+
+		//not sure if this is needed
+		"isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		"useDefineForClassFields": true
+	},
+	"exclude": ["node_modules", "dist", "src/pages/fp"],
+	"include": ["src", "server", "vite.config.ts"]
+}
